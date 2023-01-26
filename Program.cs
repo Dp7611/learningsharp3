@@ -5,7 +5,20 @@ class Program
     static void Main(string[] args)
     {
         
-            swapNumbers();
+            conditions();
+            Console.ReadKey(true);
+    }
+
+    static void conditions ()
+    {
+        //Check if x is larger than y
+        int x = 20;
+        int y = 2;
+
+        if (x > y)
+        {
+            Console.WriteLine("x is greater than y");
+        }
     }
 
     static void swapNumbers()
@@ -22,6 +35,5 @@ class Program
         Console.WriteLine("After Swapping :");
         Console.WriteLine($"First Number : {num1}");
         Console.WriteLine($"Second Number : {num2}");
-        Console.ReadKey(true); 
         }
 }
