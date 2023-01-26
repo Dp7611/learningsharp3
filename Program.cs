@@ -13,11 +13,15 @@ class Program
     {
         //Check if x is larger than y
         int x = 20;
-        int y = 2;
+        int y = 2000;
 
         if (x > y)
         {
             Console.WriteLine("x is greater than y");
+        }
+        else
+        {
+            Console.WriteLine("y is greater than x");
         }
     }
 
