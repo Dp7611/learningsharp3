@@ -5,8 +5,14 @@ class Program
     static void Main(string[] args)
     {
         
-            conditions();
+            AgeCalculator();
             Console.ReadKey(true);
+    }
+
+    static void AgeCalculator ()
+    {
+        int year = DateTime.Now.Year;
+        Console.WriteLine(year);
     }
 
     static void conditions ()
