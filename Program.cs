@@ -11,8 +11,52 @@ class Program
 
     static void AgeCalculator ()
     {
-        int year = DateTime.Now.Year;
-        Console.WriteLine(year);
+        string name;
+        int yearOfBirth;
+        string birthdayThisYear;
+        int age;
+        int currentYear;
+
+        Console.WriteLine("What is your name?");
+        name = Console.ReadLine();
+
+        Console.WriteLine("What is your year of birth?");
+
+        yearOfBirth = Convert.ToInt32( Console.ReadLine() );
+
+        Console.WriteLine("Have you had a birthday this year?");
+
+        birthdayThisYear = Console.ReadLine().ToLower();
+        currentYear = DateTime.Now.Year;
+
+        if(birthdayThisYear == "yes" || birthdayThisYear == "y")
+        {
+            age = currentYear - yearOfBirth;
+        }
+        else
+        {
+            age = currentYear - yearOfBirth -1;
+        }
+        Console.WriteLine($"You are {age} years old");
+
+        if(age < 18)
+        {
+            Console.WriteLine($"You are a junior, {name}");
+
+        } else if(age >= 18 && age < 30)
+
+        {
+            Console.WriteLine($"You are a young adult, {name}");
+
+        } else if(age >= 30 && age < 60)
+        {
+            Console.WriteLine($"You are an adult, {name}");
+
+        }
+        else
+        {
+            Console.WriteLine($"You are a senior, {name}");
+        }
     }
 
     static void conditions ()
